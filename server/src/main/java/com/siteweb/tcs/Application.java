@@ -6,9 +6,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 
-@SpringBootApplication
+@SpringBootApplication//(exclude = {MybatisPlusAutoConfiguration.class})
 @EnableScheduling
-@MapperScan(basePackages = {"com.siteweb.tcs.mapper.*"})
+@MapperScan("com.siteweb.tcs.mapper")
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
