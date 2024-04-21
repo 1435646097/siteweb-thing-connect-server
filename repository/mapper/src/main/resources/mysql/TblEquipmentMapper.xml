@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.siteweb.tcs.mapper.TblEquipmentMapper">
+    <select id="findByConnectState" resultType="com.siteweb.tcs.bean.entity.TblEquipment">
+        SELECT stationid,
+               equipmentid,
+               equipmentname,
+               equipmentno,
+               equipmentmodule,
+               equipmentstyle,
+               assetstate,
+               price,
+               usedlimit,
+               useddate,
+               buydate,
+               vendor,
+               unit,
+               equipmentcategory,
+               equipmenttype,
+               equipmentclass,
+               equipmentstate,
+               eventexpression,
+               startdelay,
+               enddelay,
+               property,
+               description,
+               equipmenttemplateid,
+               houseid,
+               monitorunitid,
+               workstationid,
+               samplerunitid,
+               displayindex,
+               connectstate,
+               updatetime,
+               parentequipmentid,
+               ratedcapacity,
+               installedmodule,
+               projectname,
+               contractno,
+               installtime,
+               equipmentsn,
+               so,
+               resourcestructureid,
+               equipmentcustomcategoryid,
+               extvalue
+        FROM tbl_equipment
+        WHERE ConnectState = #{connectState}
+    </select>
+</mapper>

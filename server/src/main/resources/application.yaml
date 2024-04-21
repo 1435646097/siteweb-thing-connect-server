@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: server-thing
+  profiles:
+    active: mysql
+  mvc:
+    servlet:
+      load-on-startup: 1
+      path: /api/thing
